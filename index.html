@@ -18,10 +18,8 @@
             text-align: center;
             color: white;
         }
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            letter-spacing: 2px;
+        .logo img {
+            width: 160px;
         }
         nav {
             background-color: #111133;
@@ -54,24 +52,25 @@
         }
         .section h2 {
             font-size: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
+            max-width: 1100px;
+            margin: auto;
         }
         .card {
             background: white;
             padding: 20px;
-            width: 280px;
             border-radius: 10px;
             box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
         }
         .card img {
             width: 100%;
-            border-radius: 10px;
+            height: 180px;
+            object-fit: contain;
         }
         .contact {
             background: #111133;
@@ -90,12 +89,15 @@
 
 <body>
 <header>
-    <div class="logo">MIKTECK</div>
+    <div class="logo">
+        <img src="https://i.imgur.com/zq1t9T4.png" alt="logo-mikteck">
+    </div>
     <div>Sistemas POS – Escáneres – Impresoras – Tecnología Corporativa</div>
 </header>
 
 <nav>
     <a href="#productos">Productos</a>
+    <a href="#catalogo">Catálogo</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
 </nav>
@@ -108,7 +110,7 @@
 <section class="section" id="productos">
     <h2>Nuestros Productos</h2>
 
-    <div class="products">
+    <div class="products-grid">
 
         <div class="card">
             <img src="https://i.imgur.com/8H4S6wV.png">
@@ -126,6 +128,50 @@
             <img src="https://i.imgur.com/nF9oi3L.png">
             <h3>Impresoras Térmicas</h3>
             <p>Impresoras de tickets profesionales y de alto rendimiento.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="catalogo">
+    <h2>Catálogo de Productos</h2>
+
+    <div class="products-grid">
+
+        <div class="card">
+            <img src="https://i.imgur.com/vYo6vqW.png">
+            <h3>Memor 10</h3>
+            <p>Dispositivo rugerizado Android para logística y retail.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/OFlsBTF.png">
+            <h3>Memor 20</h3>
+            <p>Computadora móvil industrial 5G.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/mAZN9j3.png">
+            <h3>Memor 30</h3>
+            <p>Terminal portátil de alto rendimiento.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/1uuWxXy.png">
+            <h3>Memor 35</h3>
+            <p>Terminal profesional para inventarios y retail.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/k2ip1Zz.png">
+            <h3>Magellan 1500</h3>
+            <p>Escáner fijo para punto de venta.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/grzpDgh.png">
+            <h3>Magellan 9800i</h3>
+            <p>Escáner y báscula profesional para supermercados.</p>
         </div>
 
     </div>
